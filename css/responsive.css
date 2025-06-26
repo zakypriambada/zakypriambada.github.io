@@ -1,0 +1,38 @@
+@media screen and (max-width:1200px) {
+    #hero p {
+        font-size: .9rem;
+    }
+
+    #hero h1 {
+        font-size: 2.3rem;
+    }
+    #about p{
+        text-align: justify !important;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .btn-custom1 {
+        width: 80%;
+    }
+
+    #hero .row {
+        padding-bottom: 40px;
+    }
+    #skill .col-lg-10 img {
+    width: 17%;
+    margin: 22px;
+    
+}
+
+#skill .card{
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+    margin-bottom: 20px;
+}
+
+}
+
+@media screen and (max-width:576px) {}
+
+@media screen and (max-width:350px) {}

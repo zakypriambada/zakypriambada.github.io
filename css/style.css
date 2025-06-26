@@ -1,0 +1,210 @@
+:root {
+    --mainColor: #2d283e;
+    --acsentColor: #e7d03c;
+    --secondaryColor: #4c495d;
+    --threeColor: #802bb1;
+}
+
+
+body {
+    background-color: var(--mainColor) !important;
+    font-family: 'Poppins', sans-serif;
+    min-height: 900px;
+}
+
+section h1 {
+    color: var(--acsentColor);
+    font-size: 2.5rem;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: var(--mainColor);
+}
+
+.navbar a {
+    color: white !important;
+}
+
+.nav-link.active {
+    color: var(--acsentColor) !important;
+    font-weight: 700;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23e7d03c' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+.navbar-nav .nav-link.active {
+    color: #FFA500; /* Warna aktif */
+}
+.navbar-nav .nav-link {
+    color: white; /* Warna default */
+}
+/* END NAVBAR */
+
+/* HERO */
+
+#hero {
+    min-height: 100vh;
+    padding-top: 130px;
+}
+
+#hero h1 {
+    font-size: 3rem;
+}
+
+#hero h2 {
+    font-weight: 400;
+    color: white;
+}
+
+#hero p {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 400;
+
+}
+
+
+/* CTA */
+.btn-custom1 {
+    background-color: var(--acsentColor) !important;
+    text-align: center;
+    font-size: 1.2rem;
+    min-width: 150px;
+    height: 45px;
+    color: var(--mainColor) !important;
+}
+
+.btn-custom1:hover {
+    box-shadow: 0 0 10px rgba(252, 255, 76, 0.6);
+}
+
+.float-lg-end {
+    border-radius: 100%;
+}
+
+/* END HERO */
+
+/* ABOUT */
+
+hr {
+    height: 1.5px !important;
+    margin: 0 auto;
+    color: var(--acsentColor) !important;
+}
+
+
+#about {
+    min-height: 300px;
+    width: 100%;
+    background-color: var(--secondaryColor);
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+}
+
+/* END ABOUT */
+
+/* SKILL */
+#skill {
+    padding-top: 80px;
+    padding-bottom: 20px;
+    min-height: 600px;
+    width: 100%;
+}
+
+#skill .text-center h1 {
+    color: var(--acsentColor);
+
+}
+
+#skill hr {
+    color: white;
+}
+
+#skill .col-lg-10 img {
+    width: 12%;
+    margin: 22px;
+}
+
+#skill .mt-3 {
+    margin-bottom: 80px;
+}
+
+#skill .card {
+    background-color: var(--accentColor);
+    height: 340px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+#skill .col-ld-3 .card {
+    background-color: var(--acsentColor) !important;
+}
+
+#skill .col-3 .card h3,
+p {
+    color: black;
+}
+
+#skill .col-ld-3 .card:hover {
+    /* Targetkan hanya .card saat dihover */
+    background-color: #fff2a0 !important;
+    box-shadow: 0 0 10px rgba(255, 247, 0, 0.696);
+}
+
+
+#skill .card img {
+    width: 100%;
+    margin-bottom: 15px;
+    height: 75px;
+}
+
+#skill img:not(.card img) {
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* END SKILL */
+
+/* SERTIFIKAT */
+#sertifikat {
+    margin-top: -170px;
+    padding-top: 270px;
+    padding-bottom: 80px;
+    background-color: var(--secondaryColor);
+}
+
+#sertifikat h1 {
+    color: var(--acsentColor);
+}
+
+#sertifikat hr {
+    color: white;
+}
+
+#sertifikat p,
+a {
+    color: white !important;
+
+}
+
+#sertifikat .pt-3 img {
+    width: 40%;
+    padding: 10px;
+}
+
+/* END SERTIFIKAT */
+
+/* PORTOFOLIO */
+
+#portofolio .container {
+    padding: 50px 10px;
+}
+
+#portofolio .card:hover {
+    box-shadow: 0 0 10px rgba(255, 247, 0, 0.696);
+}
+
+/* END PORTOFOLIO */
