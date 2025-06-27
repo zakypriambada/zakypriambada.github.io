@@ -10,6 +10,20 @@
     #about p {
         text-align: justify !important;
     }
+
+    #skill .col-lg-10 img {
+        width: 15% !important;
+        margin: 22px;
+    }
+
+    #skill .card {
+        height: 515px;
+    }
+
+    #skill .card img {
+        width: 70%;
+    }
+
 }
 
 @media screen and (max-width:768px) {
@@ -20,11 +34,13 @@
     #hero .row {
         padding-bottom: 40px;
     }
-#hero h2 {
-    margin-top: 10px;
-}
+
+    #hero h2 {
+        margin-top: 20px;
+    }
+
     #skill .col-lg-10 img {
-        width: 17%;
+        width: 20% !important;
         margin: 22px;
 
     }
@@ -35,6 +51,14 @@
         margin-bottom: 20px;
     }
 
+    #skill .card {
+        height: auto;
+    }
+
+    #skill .card img {
+        width: 30%;
+    }
+    
 }
 
 @media screen and (max-width:576px) {}

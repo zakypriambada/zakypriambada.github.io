@@ -122,9 +122,9 @@ section h1 {
     position: relative;
 }
 
-#hero .col-lg-5 img:hover {
+#hero .order-md-2 img:hover {
     transform: scale(1);
-     box-shadow: 0 0 25px rgb(255, 255, 255);
+    box-shadow: 0 0 25px rgb(255, 255, 255);
 }
 
 /* CTA */
@@ -156,6 +156,7 @@ hr {
     height: 1.5px !important;
     margin: 0 auto;
     color: var(--acsentColor) !important;
+    box-shadow: 0 0 15px rgb(255, 255, 255);
 }
 
 
@@ -218,15 +219,14 @@ p {
 
 #skill .col-ld-3 .card:hover {
     background-color: #fff2a0 !important;
-    box-shadow: 0 0 10px rgba(255, 247, 0, 0.696);
+    box-shadow: 0 0 15px rgb(255, 247, 0);
     transform: scale(1.02);
 }
 
 
 #skill .card img {
-    width: 100%;
+    width: 30%;
     margin-bottom: 15px;
-    height: 75px;
 }
 
 #skill img:not(.card img) {
@@ -263,6 +263,16 @@ a {
     padding: 10px;
 }
 
+#sertifikat .col-12 {
+    margin-top: 20px;
+}
+
+#sertifikat .col-12:hover {
+    transition: all 0.3s ease;
+    text-shadow: 0 0 10px rgb(255, 255, 0);
+    transform: scale(1.03);
+}
+
 /* END SERTIFIKAT */
 
 /* PORTOFOLIO */
@@ -278,6 +288,7 @@ a {
 #portofolio .card:hover {
     box-shadow: 0 0 10px rgb(255, 255, 255);
     transform: scale(1.03);
+
 }
 
 /* END PORTOFOLIO */
@@ -310,13 +321,18 @@ footer .social-icon a:hover img {
 }
 
 #content .info-card {
-    max-width: 270px;
+    max-width: 250px;
     /* Atur sesuai kebutuhan */
     word-wrap: break-word;
     overflow-wrap: break-word;
     text-align: center;
 }
 
+#content .info-card:hover {
+    font-size: 20px;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 15px rgb(255, 255, 255);
+}
 #content h3 {
     color: white;
     padding-top: 20px;
@@ -327,11 +343,6 @@ footer .social-icon a:hover img {
     padding-top: 10px;
 }
 
-#content .info-card:hover {
-    font-size: 20px;
-    transition: all 0.3s ease;
-    text-shadow: 0 0 15px rgb(255, 255, 255);
-}
 
 #content .vr {
     width: 2px;
@@ -346,40 +357,42 @@ footer .social-icon a:hover img {
 
 /* FORM CONTACT */
 
- .form-container {
-            max-width: 700px;
-            margin: 80px auto;
-            padding: 30px;
-            border-radius: 10px;
-            background-color: var(--secondaryColor);
-            box-shadow: 0 0 15px rgb(255, 234, 0);
-        }
+.form-container {
+    max-width: 700px;
+    margin: 80px auto;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #403956;
+    box-shadow: 0 0 14px #e7d03ca2;
+}
 
-        .form-control, .form-select {
-            background-color: #ffffff;
-            color: white;
-            border: none;
-            padding: 12px;
-        }
+.form-control,
+.form-select {
+    background-color: #ffffff;
+    color: white;
+    border: none;
+    padding: 12px;
+}
 
-        .form-control:focus, .form-select:focus {
-            background-color: #333;
-            color: white;
-            box-shadow: 0 0 5px #e7d03c;
-        }
+.form-control:focus,
+.form-select:focus {
+    background-color: #333;
+    color: white;
+    box-shadow: 0 0 5px #e7d03c;
+}
 
-        .btn-custom {
-            background-color: var(--acsentColor) !important;
-            color: black;
-        }
+.btn-custom {
+    background-color: var(--acsentColor) !important;
+    color: black;
+}
 
-        .btn-custom:hover {
-            background-color: #fff2a0 !important;
-        }
+.btn-custom:hover {
+    background-color: #fff2a0 !important;
+}
 
-        #contact .form-label{
-            color: white;
-        }
+#contact .form-label {
+    color: white;
+}
 
 /* END FORM CONTACT */
 /* END HALAMAN CONTACT */
