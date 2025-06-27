@@ -1,3 +1,32 @@
+// ANIMASI LOADING PAGE INDEX
+window.addEventListener("load", function () {
+    document.body.classList.add("loaded");
+});
+
+// FADEDOWN
+function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top <= window.innerHeight &&
+        rect.bottom >= 0
+    );
+}
+
+// Cari semua elemen dengan class fade-down
+const elements = document.querySelectorAll('.fade-down');
+
+function handleScroll() {
+    elements.forEach(el => {
+        if (isElementInViewport(el)) {
+            el.classList.add('show');
+        }
+    });
+}
+
+// Jalankan saat load dan scroll
+window.addEventListener('load', handleScroll);
+window.addEventListener('scroll', handleScroll);
+
 // TOOGLE ICON NAVBAR
 document.addEventListener('click', function (event) {
     // Cek apakah klik berada di luar .navbar
@@ -26,6 +55,7 @@ document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
         }
     });
 });
+
 // NAVBAR
 document.addEventListener('DOMContentLoaded', function () {
     const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
@@ -46,9 +76,9 @@ document.addEventListener('DOMContentLoaded', function () {
             if (isInViewport(section)) {
                 const targetId = section.id;
                 navLinks.forEach(link => {
-                    link.classList.remove('active');
+                    link.classList.remove('activee');
                     if (link.getAttribute('href') === '#' + targetId) {
-                        link.classList.add('active');
+                        link.classList.add('activee');
                     }
                 });
             }

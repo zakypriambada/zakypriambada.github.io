@@ -5,12 +5,62 @@
     --threeColor: #802bb1;
 }
 
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-down {
+    opacity: 0;
+    transform: translateY(-100px);
+}
+
+.fade-down.show {
+    animation: fadeDown 1s ease forwards;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.fadeInDown {
+    animation-name: fadeInDown;
+}
 
 body {
     background-color: var(--mainColor) !important;
     font-family: 'Poppins', sans-serif;
     min-height: 900px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 2s ease;
 }
+
+body.loaded {
+    opacity: 5;
+    visibility: visible;
+}
+
 
 section h1 {
     color: var(--acsentColor);
@@ -24,9 +74,16 @@ section h1 {
 
 .navbar a {
     color: white !important;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
-.nav-link.active {
+.navbar a:hover {
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+    transform: scale(1.1);
+}
+
+.nav-link.activee {
     color: var(--acsentColor) !important;
     font-weight: 700;
 }
@@ -34,12 +91,7 @@ section h1 {
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23e7d03c' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
 }
-.navbar-nav .nav-link.active {
-    color: #FFA500; /* Warna aktif */
-}
-.navbar-nav .nav-link {
-    color: white; /* Warna default */
-}
+
 /* END NAVBAR */
 
 /* HERO */
@@ -65,6 +117,15 @@ section h1 {
 
 }
 
+#hero .col-lg-5 img {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+#hero .col-lg-5 img:hover {
+    transform: scale(1);
+     box-shadow: 0 0 25px rgb(255, 255, 255);
+}
 
 /* CTA */
 .btn-custom1 {
@@ -74,10 +135,13 @@ section h1 {
     min-width: 150px;
     height: 45px;
     color: var(--mainColor) !important;
+
 }
 
 .btn-custom1:hover {
     box-shadow: 0 0 10px rgba(252, 255, 76, 0.6);
+    transition: all 0.2s ease;
+    transform: scale(1.03);
 }
 
 .float-lg-end {
@@ -148,10 +212,14 @@ p {
     color: black;
 }
 
+#skill .col-ld-3 .card {
+    transition: all 0.3s ease !important;
+}
+
 #skill .col-ld-3 .card:hover {
-    /* Targetkan hanya .card saat dihover */
     background-color: #fff2a0 !important;
     box-shadow: 0 0 10px rgba(255, 247, 0, 0.696);
+    transform: scale(1.02);
 }
 
 
@@ -203,8 +271,115 @@ a {
     padding: 50px 10px;
 }
 
+#portofolio .card {
+    transition: all 0.3s ease !important;
+}
+
 #portofolio .card:hover {
-    box-shadow: 0 0 10px rgba(255, 247, 0, 0.696);
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    transform: scale(1.03);
 }
 
 /* END PORTOFOLIO */
+
+/* FOOTER */
+footer .social-icon a {
+    text-decoration: none;
+}
+
+footer .social-icon img {
+    margin: 8px;
+    transition: all 0.3s ease !important;
+}
+
+footer .social-icon a:hover img {
+    transform: scale(1.3);
+}
+
+
+
+/* HALAMAN CONTACT */
+
+/* NAVBAR */
+
+
+/* END NAVBAR */
+#content {
+    padding-top: 130px;
+    padding-bottom: 100PX;
+}
+
+#content .info-card {
+    max-width: 270px;
+    /* Atur sesuai kebutuhan */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: center;
+}
+
+#content h3 {
+    color: white;
+    padding-top: 20px;
+}
+
+#content p {
+    color: white;
+    padding-top: 10px;
+}
+
+#content .info-card:hover {
+    font-size: 20px;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 15px rgb(255, 255, 255);
+}
+
+#content .vr {
+    width: 2px;
+    background-color: var(--acsentColor);
+    align-self: stretch;
+}
+
+#content .info-card img {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(270deg) brightness(103%) contrast(100%);
+    padding-bottom: 20px;
+}
+
+/* FORM CONTACT */
+
+ .form-container {
+            max-width: 700px;
+            margin: 80px auto;
+            padding: 30px;
+            border-radius: 10px;
+            background-color: var(--secondaryColor);
+            box-shadow: 0 0 15px rgb(255, 234, 0);
+        }
+
+        .form-control, .form-select {
+            background-color: #ffffff;
+            color: white;
+            border: none;
+            padding: 12px;
+        }
+
+        .form-control:focus, .form-select:focus {
+            background-color: #333;
+            color: white;
+            box-shadow: 0 0 5px #e7d03c;
+        }
+
+        .btn-custom {
+            background-color: var(--acsentColor) !important;
+            color: black;
+        }
+
+        .btn-custom:hover {
+            background-color: #fff2a0 !important;
+        }
+
+        #contact .form-label{
+            color: white;
+        }
+
+/* END FORM CONTACT */
+/* END HALAMAN CONTACT */

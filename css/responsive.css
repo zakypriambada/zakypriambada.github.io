@@ -6,7 +6,8 @@
     #hero h1 {
         font-size: 2.3rem;
     }
-    #about p{
+
+    #about p {
         text-align: justify !important;
     }
 }
@@ -19,17 +20,20 @@
     #hero .row {
         padding-bottom: 40px;
     }
+#hero h2 {
+    margin-top: 10px;
+}
     #skill .col-lg-10 img {
-    width: 17%;
-    margin: 22px;
-    
-}
+        width: 17%;
+        margin: 22px;
 
-#skill .card{
-    padding-left: 30px !important;
-    padding-right: 30px !important;
-    margin-bottom: 20px;
-}
+    }
+
+    #skill .card {
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+        margin-bottom: 20px;
+    }
 
 }
 
