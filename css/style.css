@@ -288,8 +288,21 @@ a {
 #portofolio .card:hover {
     box-shadow: 0 0 10px rgb(255, 255, 255);
     transform: scale(1.03);
-
 }
+
+#portofolio .tag {
+    display: inline-block;
+    padding: 4px 8px;
+    margin: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.card:hover .tag {
+    box-shadow: 0 0 5px rgb(255, 247, 0);
+}
+
 
 /* END PORTOFOLIO */
 
@@ -306,7 +319,15 @@ footer .social-icon img {
 footer .social-icon a:hover img {
     transform: scale(1.3);
 }
-
+footer .btn {
+    background-color: var(--acsentColor);
+    color:black !important;
+}
+footer .btn:hover {
+    box-shadow: 0 0 10px rgba(252, 255, 76, 0.6);
+    transition: all 0.2s ease;
+    transform: scale(1.03);
+}
 
 
 /* HALAMAN CONTACT */
