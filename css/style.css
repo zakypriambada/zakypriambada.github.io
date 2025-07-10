@@ -2,7 +2,7 @@
     --mainColor: #2d283e;
     --acsentColor: #e7d03c;
     --secondaryColor: #4c495d;
-    --threeColor: #802bb1;
+    --threeColor: #8e39c0;
 }
 
 @keyframes fadeDown {
@@ -267,11 +267,6 @@ a {
     margin-top: 20px;
 }
 
-#sertifikat .col-12:hover {
-    transition: all 0.3s ease;
-    text-shadow: 0 0 10px rgb(255, 255, 0);
-    transform: scale(1.03);
-}
 
 /* END SERTIFIKAT */
 
@@ -300,9 +295,18 @@ a {
 }
 
 .card:hover .tag {
-    box-shadow: 0 0 5px rgb(255, 247, 0);
+    box-shadow: 0 0 5px var(--threeColor);
 }
 
+#portofolio .btn {
+    background-color: var(--acsentColor);
+    color:black !important;
+}
+#portofolio .btn:hover {
+    box-shadow: 0 0 10px rgba(252, 255, 76, 0.6);
+    transition: all 0.2s ease;
+    transform: scale(1.03);
+}
 
 /* END PORTOFOLIO */
 
@@ -418,3 +422,10 @@ footer .btn:hover {
 
 /* END FORM CONTACT */
 /* END HALAMAN CONTACT */
+
+/* HALAMAN PORTOFOLIO */
+
+
+
+
+/* END HALAMAN PORTOFOLIO */
