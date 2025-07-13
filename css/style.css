@@ -5,6 +5,88 @@
     --threeColor: #8e39c0;
 }
 
+/* UPDATE */
+
+#overlay-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.88);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: all;
+    animation: fadeIn 0.8s ease-in-out;
+    padding: 20px;
+    text-align: center;
+}
+
+.overlay-content {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 2vw; /* scalable on mobile */
+    max-width: 90%;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 14px 24px;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    animation: zoomIn 0.5s ease-in-out;
+}
+
+.overlay-content:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Animation Effects */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Disable interaction with all except overlay */
+body > *:not(#overlay-layer) {
+    pointer-events: none;
+}
+
+/* Media Query for small screens */
+@media (max-width: 576px) {
+    .overlay-content {
+        font-size: 18px;
+        padding: 12px 18px;
+        border-radius: 10px;
+    }
+}
+
+
+/* END UPDATE */
+
+
+
+
 @keyframes fadeDown {
     from {
         opacity: 0;
@@ -300,8 +382,9 @@ a {
 
 #portofolio .btn {
     background-color: var(--acsentColor);
-    color:black !important;
+    color: black !important;
 }
+
 #portofolio .btn:hover {
     box-shadow: 0 0 10px rgba(252, 255, 76, 0.6);
     transition: all 0.2s ease;
@@ -323,10 +406,12 @@ footer .social-icon img {
 footer .social-icon a:hover img {
     transform: scale(1.3);
 }
+
 footer .btn {
     background-color: var(--acsentColor);
-    color:black !important;
+    color: black !important;
 }
+
 footer .btn:hover {
     box-shadow: 0 0 10px rgba(252, 255, 76, 0.6);
     transition: all 0.2s ease;
